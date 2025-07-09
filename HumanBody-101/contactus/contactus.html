@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/HumanBody-101/contactus/contactus.css" />
+    <link rel="icon" href="/HumanBody-101/images/Human_Body_Project.png" />
+    <style>
+      #date-time {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        color: #fff;
+        font-size: 18px;
+        font-family: "Arial", sans-serif;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 8px 12px;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      .error {
+        color: red;
+        font-size: 14px;
+        display: none;
+      }
+      .greeting {
+        color: green;
+        font-size: 16px;
+        font-weight: bold;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="/HumanBody-101/index.html">
+          <img src="/HumanBody-101/images/Human_Body_Project.png" alt="Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/HumanBody-101/aboutus/aboutus.html">About Us</a></li>
+        <li><a href="/HumanBody-101/systems/systems.html">Body Systems</a></li>
+        <li><a href="/HumanBody-101/resources/resources.html">Resources</a></li>
+        <li>
+          <a href="/HumanBody-101/testimonials/testimonials.html"
+            >Testimonials</a
+          >
+        </li>
+        <li>
+          <a href="/HumanBody-101/calculationform/calculationform.html"
+            >Health Metrics</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div id="date-time"></div>
+    <header>
+      <h1><strong>We Love Hearing From You ♡</strong></h1>
+    </header>
+
+    <div class="contact-container">
+      <form class="contact-form" action="#" onsubmit="return formValidation()">
+        <label for="name">Name:</label>
+        <input
+          class="st"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+        />
+        <span id="name-error" class="error">Please enter your name.</span>
+
+        <label for="email">Email:</label>
+        <input
+          class="st"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+        />
+        <span id="email-error" class="error">Please enter your email.</span>
+
+        <label for="message">Message:</label>
+        <textarea
+          class="st"
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message here..."
+        ></textarea>
+        <span id="message-error" class="error">Please enter your message.</span>
+
+        <div>
+          <input type="checkbox" id="checkbox" name="checkbox" />
+          <label for="checkbox">Do you love us? :)</label>
+        </div>
+        <span id="checkbox-error" class="error"
+          >You must love us to continue :)</span
+        >
+        <p id="greeting" class="greeting">
+          Thank you for filling out the form! We appreciate your message.
+        </p>
+        <button class="st" type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h2>Our Contact Details</h2>
+        <p>
+          <a href="mailto:202310524@students.asu.edu.jo"
+            >202310524@students.asu.edu.jo</a
+          >
+        </p>
+        <p>Phone: +962 78 123 7323</p>
+        <p>
+          Address: Al Arab Street, Applied Science University, Information
+          Technology Department
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function displayDateTime() {
+        var date = new Date();
+        var dateTime = date.toLocaleString();
+        document.getElementById("date-time").textContent = dateTime;
+      }
+      displayDateTime();
+      setInterval(displayDateTime, 1000);
+    </script>
+    <script src="/HumanBody-101/contactus/formvalidation.js"></script>
+  </body>
+</html>

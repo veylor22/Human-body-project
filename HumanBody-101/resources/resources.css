@@ -1,0 +1,47 @@
+nav {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #265060;
+  width: 100%;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 25px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+body {
+  background-color: #265060;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  color: #fff;
+  font-size: 21px;
+  padding: 40px;
+  text-align: center;
+}
+
+.resource-item {
+  color: #ffff;
+  font-size: 24px;
+  margin: 2px;
+}
+
+.resource-item a {
+  color: #fff;
+}

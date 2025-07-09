@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Rate and Blood Pressure Calculator</title>
+    <link
+      rel="stylesheet"
+      href="/HumanBody-101/calculationform/calculationform.css"
+    />
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="/HumanBody-101/index.html">
+          <img src="/HumanBody-101/images/Human_Body_Project.png" alt="Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/HumanBody-101/aboutus/aboutus.html">About Us</a></li>
+        <li><a href="/HumanBody-101/systems/systems.html">Body Systems</a></li>
+        <li><a href="/HumanBody-101/resources/resources.html">Resources</a></li>
+        <li>
+          <a href="/HumanBody-101/testimonials/testimonials.html"
+            >Testimonials</a
+          >
+        </li>
+        <li>
+          <a href="/HumanBody-101/contactus/contactus.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Heart Rate And Blood Pressure Calculator</h1>
+    </header>
+    <div class="body-container">
+      <form id="body">
+        <label for="systolic">Systolic Blood Pressure:</label>
+        <input
+          type="number"
+          class="st"
+          id="systolic1"
+          min="1"
+          max="300"
+          placeholder="Enter systolic value"
+          required
+        />
+        <span id="systolic-error" class="error"></span><br />
+
+        <label for="diastolic">Diastolic Blood Pressure:</label>
+        <input
+          type="number"
+          class="st"
+          id="diastolic1"
+          min="1"
+          max="200"
+          placeholder="Enter diastolic value"
+          required
+        />
+        <span id="diastolic-error" class="error"></span><br />
+
+        <label for="heartRate">Heart Rate:</label>
+        <input
+          type="number"
+          class="st"
+          id="heartRate1"
+          min="1"
+          max="200"
+          placeholder="Enter heart rate"
+          required
+        />
+        <span id="heartRate-error" class="error"></span><br /><br />
+
+        <div id="ra">
+          <label>Activity Level:</label><br /><br />
+          <input type="radio" id="low" name="activityLevel" value="Low" />
+          <label for="low">Low</label>
+          <input
+            type="radio"
+            id="moderate"
+            name="activityLevel"
+            value="Moderate"
+          />
+          <label for="moderate">Moderate</label>
+          <input type="radio" id="high" name="activityLevel" value="High" />
+          <label for="high">High</label><br /><br />
+        </div>
+
+        <div class="button-container">
+          <button
+            style="text-align: center; font-size: large; width: 140px"
+            class="st"
+            type="button"
+            onclick="Calculate()"
+          >
+            Calculate
+          </button>
+          <button
+            style="text-align: center; font-size: large; width: 140px"
+            class="st"
+            type="button"
+            onclick="reset()"
+          >
+            Reset
+          </button>
+        </div>
+        <br /><br />
+
+        <label for="calculation">Calculation Result:</label>
+        <textarea class="st" id="rr" rows="10" cols="30"></textarea>
+      </form>
+    </div>
+    <script>
+      function validateInput(value, min, max, errorElement, errorMessage) {
+        if (value < min || value > max || isNaN(value)) {
+          document.getElementById(errorElement).innerText = errorMessage;
+          return false;
+        } else {
+          document.getElementById(errorElement).innerText = "";
+          return true;
+        }
+      }
+
+      var bpStatus;
+
+      function Calculate() {
+        var systolic = parseInt(document.getElementById("systolic1").value);
+        var diastolic = parseInt(document.getElementById("diastolic1").value);
+        var heartRate = parseInt(document.getElementById("heartRate1").value);
+
+        var valid = true;
+
+        valid &= validateInput(
+          systolic,
+          1,
+          300,
+          "systolic-error",
+          "Enter a valid systolic value (1-300)."
+        );
+        valid &= validateInput(
+          diastolic,
+          1,
+          200,
+          "diastolic-error",
+          "Enter a valid diastolic value (1-200)."
+        );
+        valid &= validateInput(
+          heartRate,
+          1,
+          200,
+          "heartRate-error",
+          "Enter a valid heart rate (1-200)."
+        );
+
+        if (!valid) {
+          return;
+        }
+
+        if (systolic <= 120 && diastolic <= 80) {
+          bpStatus = "Normal";
+        } else if (systolic >= 120 && systolic <= 129 && diastolic <= 80) {
+          bpStatus = "Elevated";
+        } else if (
+          systolic >= 130 &&
+          systolic <= 139 &&
+          diastolic >= 80 &&
+          diastolic <= 89
+        ) {
+          bpStatus = "High Blood Pressure (Hypertension) Stage 1";
+        } else if (systolic >= 140 || diastolic >= 90) {
+          bpStatus = "High Blood Pressure (Hypertension) Stage 2";
+        } else {
+          bpStatus = "Hypertensive Crisis";
+        }
+
+        var hrStatus;
+
+        if (heartRate < 60) {
+          hrStatus = "Bradycardia (Low Heart Rate)";
+        } else if (heartRate >= 60 && heartRate <= 100) {
+          hrStatus = "Normal Heart Rate";
+        } else {
+          hrStatus = "Tachycardia (High Heart Rate)";
+        }
+
+        var activityStatus = "Not Selected";
+        if (document.getElementById("low").checked) {
+          activityStatus = "Low";
+        } else if (document.getElementById("moderate").checked) {
+          activityStatus = "Moderate";
+        } else if (document.getElementById("high").checked) {
+          activityStatus = "High";
+        }
+
+        document.getElementById("rr").value =
+          "Blood Pressure: " +
+          systolic +
+          "/" +
+          diastolic +
+          "\n" +
+          "BP Status: " +
+          bpStatus +
+          "\n" +
+          "Heart Rate Status: " +
+          hrStatus +
+          "\n" +
+          "Activity Level: " +
+          activityStatus;
+      }
+
+      function reset() {
+        document.getElementById("body").reset();
+        document.getElementById("rr").value = "";
+        document.getElementById("systolic-error").innerText = "";
+        document.getElementById("diastolic-error").innerText = "";
+        document.getElementById("heartRate-error").innerText = "";
+      }
+    </script>
+  </body>
+</html>

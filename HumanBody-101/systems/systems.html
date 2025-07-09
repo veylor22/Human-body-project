@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/HumanBody-101/systems/systems.css" />
+    <title>Human Body Systems</title>
+    <link rel="icon" href="/HumanBody-101/images/Human_Body_Project.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #265060;
+        color: #ffffff;
+        height: 100%;
+        margin: 0;
+      }
+
+      .card {
+        background-color: #a1b8b639;
+        color: #f7f7f7;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 60%;
+        max-width: 450px;
+        margin-left: 100px;
+        margin-right: auto;
+        margin-top: 100px;
+      }
+
+      .card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .carousel {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: auto;
+      }
+
+      .carousel-indicators {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="/HumanBody-101/index.html">
+          <img src="/HumanBody-101/images/Human_Body_Project.png" alt="Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/HumanBody-101/aboutus/aboutus.html">About Us</a></li>
+        <li><a href="/HumanBody-101/resources/resources.html">Resources</a></li>
+        <li>
+          <a href="/HumanBody-101/testimonials/testimonials.html"
+            >Testimonials</a
+          >
+        </li>
+        <li>
+          <a href="/HumanBody-101/calculationform/calculationform.html"
+            >Health Metrics</a
+          >
+        </li>
+        <li>
+          <a href="/HumanBody-101/contactus/contactus.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Human Body Systems</h1>
+    </header>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+        ></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="/HumanBody-101/systems/systems.html#cir">
+            <img
+              class="d-block w-50 mx-auto"
+              src="/HumanBody-101/images/CirculatorySystem.png"
+              alt="Circulatory System"
+            />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="systems.html#ner">
+            <img
+              class="d-block w-50 mx-auto"
+              src="/HumanBody-101/images/NervousSystem.png"
+              alt="Nervous System"
+            />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="/HumanBody-101/systems/systems.html#res">
+            <img
+              class="d-block w-50 mx-auto"
+              src="/HumanBody-101/images/RespiratorySystem.png"
+              alt="Respiratory System"
+            />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="systems.html#sk">
+            <img
+              class="d-block w-50 mx-auto"
+              src="/HumanBody-101/images/SkeletalSystem.png"
+              alt="Skeletal System"
+            />
+          </a>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <main class="container">
+      <div class="row">
+        <div class="card mb-3 col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">The Circulatory System</h5>
+            <img
+              id="cir"
+              src="/HumanBody-101/images/Heart.gif"
+              class="img-fluid rounded-start"
+              alt="Heart"
+            />
+            <p class="card-text">
+              Transports blood, oxygen, and nutrients throughout the body. It
+              includes the heart, blood vessels, and blood, ensuring oxygen
+              delivery and waste removal.
+            </p>
+            <p class="card-text">
+              <strong>Role:</strong> Pumps blood, distributing oxygen and
+              nutrients while collecting waste. Operates rhythmically through
+              electrical impulses.
+            </p>
+            <p class="card-text">
+              <a
+                href="https://en.wikipedia.org/wiki/Circulatory-System"
+                target="_blank"
+                >Learn more about the Circulatory System on Wikipedia.</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="card mb-3 col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">The Nervous System</h5>
+            <img
+              id="ner"
+              src="/HumanBody-101/images/Brain.gif"
+              class="img-fluid rounded-start"
+              alt="Brain"
+            />
+            <p class="card-text">
+              Controls body activities and responses, including voluntary and
+              involuntary actions. Comprises the brain, spinal cord, and nerves.
+            </p>
+            <p class="card-text">
+              <strong>Brain:</strong> Processes information and controls
+              functions like memory, emotions, and reasoning. Communicates with
+              the body through the spinal cord.
+            </p>
+            <p class="card-text">
+              <a
+                href="https://en.wikipedia.org/wiki/Nervous-System"
+                target="_blank"
+                >Learn more about the Nervous System on Wikipedia.</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card mb-3 col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">The Respiratory System</h5>
+            <img
+              src="/HumanBody-101/images/Nose.png"
+              class="img-fluid rounded-start"
+              alt="Nose"
+            />
+            <p id="res" class="card-text">
+              Enables oxygen intake and carbon dioxide expulsion. Includes the
+              lungs, airways, and diaphragm for effective gas exchange.
+            </p>
+            <p class="card-text">
+              <strong>Role:</strong> Filters, warms, and moistens air before it
+              reaches the lungs. Uses cilia and mucus to trap dust and microbes.
+            </p>
+            <p class="card-text">
+              <a
+                href="https://en.wikipedia.org/wiki/Respiratory-System"
+                target="_blank"
+                >Learn more about the Respiratory System on Wikipedia.</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="card mb-3 col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">The Skeletal System</h5>
+            <img
+              src="/HumanBody-101/images/Skull.gif"
+              class="img-fluid rounded-start"
+              alt="Skull"
+            />
+            <p id="sk" class="card-text">
+              Provides structure, protection, and support for organs. Comprises
+              bones, cartilage, ligaments, and joints for movement and mineral
+              storage.
+            </p>
+            <p class="card-text">
+              <strong>Role:</strong> Protects the brain and supports sensory
+              organs. Provides attachment points for muscles used in chewing and
+              facial expressions.
+            </p>
+            <p class="card-text">
+              <a
+                href="https://en.wikipedia.org/wiki/Skeletal-System"
+                target="_blank"
+                >Learn more about the Skeletal System on Wikipedia.</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

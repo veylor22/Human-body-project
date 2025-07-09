@@ -1,0 +1,97 @@
+header {
+  margin: 20px auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 30px;
+}
+
+.font-image {
+  width: 400px;
+  float: right;
+  height: auto;
+  border-radius: 8px;
+  margin: 15px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.p-img {
+  width: 300px;
+  float: inline-end;
+  height: auto;
+  border-radius: 8px;
+  margin: 9px;
+}
+
+.introduction p {
+  font-size: 24px;
+  line-height: 1.6;
+  margin: 40px 50px 5px;
+  float: inline-end;
+}
+
+.system-types {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.branch {
+  background-color: #1f3b4d;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.system-types a {
+  color: #ffffff;
+}
+
+.system-types a:hover {
+  color: cadetblue;
+}
+
+.branch h2 {
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.branch p {
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 25px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="/HumanBody-101/testimonials/testimonials.css"
+    />
+    <title>Testimonials</title>
+    <link rel="icon" href="/HumanBody-101/images/Human_Body_Project.png" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="/HumanBody-101/index.html">
+          <img src="/HumanBody-101/images/Human_Body_Project.png" alt="Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/HumanBody-101/aboutus/aboutus.html">About Us</a></li>
+        <li><a href="/HumanBody-101/resources/resources.html">Resources</a></li>
+        <li>
+          <a href="/HumanBody-101/calculationform/calculationform.html"
+            >Health Metrics</a
+          >
+        </li>
+        <li>
+          <a href="/HumanBody-101/contactus/contactus.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="testimonials-section">
+      <h1 style="font-size: 36px; margin-bottom: 10px; color: #c1e1ec">
+        Testimonials
+      </h1>
+      <p style="font-size: larger">
+        See what our users say about emailing anatomy with us!
+      </p>
+      <div class="container">
+        <div class="testimonial">
+          <p class="quote">
+            "This platform transformed how I email anatomy. The interactive
+            tools are fantastic!"
+          </p>
+          <p class="author">- omar.almasri@gmail.com</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">
+            "As an educator, I recommend this to all my students. It's engaging
+            and clear."
+          </p>
+          <p class="author">- fatima.alhamdan@hotmail.com</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">
+            "I’ve never enjoyed emailing anatomy more. The visual diagrams are a
+            game-changer!"
+          </p>
+          <p class="author">- yara.aburumman@yahoo.com</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">
+            "This platform makes communicating anatomy through emails so much
+            easier and more effective."
+          </p>
+          <p class="author">- khaled.aljafari@google.com</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">
+            "The best platform for learning anatomy through email. A must-try
+            for anyone in the field!"
+          </p>
+          <p class="author">- noor.alqudah@google.com</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">
+            "A seamless and enjoyable experience for emailing anatomical
+            concepts. Highly recommend it!"
+          </p>
+          <p class="author">- rania.alkhateeb@outlook.com</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">
+            "Using this platform for anatomy-related emails has made everything
+            so much clearer and more engaging."
+          </p>
+          <p class="author">- tareq.alnajjar@gmail.com</p>
+        </div>
+        <div class="testimonial">
+          <p class="quote">
+            "I can't imagine emailing anatomy without this tool anymore. It's
+            been a game changer in my practice!"
+          </p>
+          <p class="author">- samira.albasheer@gmail.com</p>
+        </div>
+      </div>
+
+      <div id="userTestimonial"></div>
+
+      <p style="font-size: 2.3em; color: #c1e1ec">
+        <strong>
+          See!!! We are the best web page for Anatomy. Don't miss us!!!!<br />Have
+          fun😁
+        </strong>
+      </p>
+    </section>
+
+    <script>
+      var name = localStorage.testimonialName;
+      var email = localStorage.testimonialEmail;
+      var message = localStorage.testimonialMessage;
+
+      if (name && email && message) {
+        var userTestimonialContainer =
+          document.getElementById("userTestimonial");
+        userTestimonialContainer.innerHTML =
+          '<div class="testimonial">' +
+          '<p class="quote">"' +
+          message +
+          '"</p>' +
+          '<p class="author">- ' +
+          name +
+          ", " +
+          email +
+          "</p>" +
+          "</div>";
+      }
+    </script>
+  </body>
+</html>
